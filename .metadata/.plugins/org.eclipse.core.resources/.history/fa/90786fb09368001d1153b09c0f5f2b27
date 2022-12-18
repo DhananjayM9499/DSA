@@ -1,0 +1,22 @@
+package cdac.in;
+
+import java.util.*;
+
+
+public class program {
+
+	 public static void main(String[] args)
+	    {
+		 array rd = new array();
+	        int a[] = { 10,20,30,30,40,40,50,60,70 };
+	    
+	        int n = a.length;
+	 
+	        n = rd.duplicateElements(a, n);
+	 List al=Arrays.asList(a);
+	 System.out.println(al);
+	      
+	        for (int i = 0; i < n; i++)
+	            System.out.print(a[i] + " ");
+	    }
+}

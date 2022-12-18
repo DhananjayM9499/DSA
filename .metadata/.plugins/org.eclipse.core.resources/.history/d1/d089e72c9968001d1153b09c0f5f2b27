@@ -1,0 +1,48 @@
+package cdac.in;
+import java.util.Scanner;
+
+public class firstAndSecondLarest
+{
+
+     public static void main(String []args)
+     {
+         Scanner sc=new Scanner(System.in);
+         
+         
+         int[] numbers = {10,40,60,20,90,60,70,90};   
+        System.out.println("Enter the array");  
+        for(int i=0;i<numbers.length;i++)     
+        {
+        	numbers[i]=sc.nextInt();
+        }
+               
+        int lar1=numbers[0];   //Initialize the first largest element
+        int lar2=numbers[1];   //Initialize the second largest element
+
+         //Check by swapping elements
+        
+               if(lar1<lar2)
+                {
+                    int temp=lar1;
+                    lar1=lar2;
+                    lar2=temp;
+                }
+                
+        for(int i=2;i<numbers.length;i++)
+        {
+            if (numbers[i] > lar1)
+			{
+				lar2 = lar1;
+				lar1 = numbers[i];
+			}
+			else if (numbers[i] > lar2 && numbers[i] != lar1)
+			{
+				lar2 = numbers[i];
+			}
+        }
+        System.out.println("First Largest"+lar1);    //Display the first largest
+        System.out.println("Second Largest "+lar2);  //Display the second largest
+        
+       
+    }
+}
